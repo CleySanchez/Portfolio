@@ -1,0 +1,253 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
+/* Global variables */
+:root {
+  /* colors */
+  
+  /* Typography */
+
+  
+  /* sizing */
+}
+
+/* Typography */
+@font-face {
+  font-family: "DMSans";
+  src: url(/Fonts/DMSans.ttf);
+}
+
+/* Base Styles */
+body,
+form {
+  font: 1em serif;
+  padding: 0;
+  margin: 0 auto;
+}
+
+form {
+  max-width: 200px;
+}
+
+p * {
+  margin: 20px;
+}
+
+/* Input Styles */
+input#mail {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  border: 1px solid #000000;
+  margin: 0;
+  font-family: "DMSans" sans-serif;
+  font-size: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input.invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* Heading Styles */
+h1,
+h2,
+h3 {
+  font-family: "DMSans", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+/* Link Styles */
+a {
+  color: #010203;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #c2cfdb;
+}
+
+a:active {
+  color: #2ada6e;
+}
+
+/* Button Styles */
+button {
+  border: none;
+  font-family: inherit;
+  background-color: #2d7e72;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(202, 18, 18, 0.3);
+}
+
+.my-button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-variation-settings: "wght" 150;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.my-button:hover {
+  background-color: #9593FF;
+  font-variation-settings: "wght" 400;
+}
+
+/* Grid Styles */
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 800px;
+  border-radius: 5px;
+}
+
+.grid-item {
+  background-color: #7d76cd;
+  padding: 20px;
+  text-align: center;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  font-variation-settings: "wght" 150;
+  border: none;
+  border-radius: 5px;
+}
+
+.grid-item:hover {
+  background-color: rgb(185, 244, 228);
+  font-variation-settings: "wght" 700;
+}
+
+/* Flex Styles */
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-variation-settings: "wght" 700;
+  border-radius: 5px;
+}
+
+.flex-item {
+  background-color: #80e3d43b;
+  padding: 20px;
+  text-align: center;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  font-variation-settings: "wght" 150;
+  border: none;
+  border-radius: 5px;
+}
+
+.flex-item:hover {
+  background-color: #9593FF;
+  font-variation-settings: "wght" 700;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .grid-container {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .grid-item {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .grid-container {
+    grid-gap: 10px;
+  }
+}
+
+/* Heading Hover Effect */
+h1:hover {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  font-variation-settings: "wght" 150;
+}
+
+/* Spin Animation */
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+img.animated_image {
+  -webkit-animation: spin 15s linear infinite;
+          animation: spin 15s linear infinite;
+}
+
+/* Background Color */
+#home {
+  background: -webkit-gradient(linear, left top, right top, from(#4b134f), to(#c94b4b));
+  background: linear-gradient(to right, #4b134f, #c94b4b);
+}
+
+#contact {
+  background: -webkit-gradient(linear, left top, right top, from(#009FFF), to(#ec2F4B));
+  background: linear-gradient(to right, #009FFF, #ec2F4B);
+}

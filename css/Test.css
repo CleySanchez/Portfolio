@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "DMSans";
+    src: url(/Fonts/DMSans.ttf);
+}
+
+body
+{
+    font-family: "DMSans",serif;
+
+}
+
+a {
+  color: #357b70;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 colonnes égales */
+    grid-gap: 10px; /* Espacement entre les éléments */
+    width: 800px;
+  }
+  
+  .grid-item {
+    background-color: #827ae0; /* Couleur de fond */
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Centrage du texte */
+   transition: 0.5s ease-in;
+   font-variation-settings: "wght" 150;
+  }  
+
+  @media screen and (min-widht:480px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+    
+      }
+      
+      .grid-item {
+        background-color: #ff0101; /* Couleur de fond */
+        
+      }  
+    
+  }
+   {
+    background-size: cover; /* Adjusts the size to cover the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+*
+{
+     margin :0;
+     padding: 0;
+     font-family: DMsans.ttf; 
+}
+
+
+    body
+{
+display:flex;
+justify-content : center;
+align-items: center;
+min-height:100vh;
+background: #000;
+}
+
+
+
+.wavy {
+	position: relative;
+	-webkit-box-reflect: below -14px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+.wavy span {
+	position: relative;
+   /*I don't think it's necessary*/
+	display: inline-block;
+	animation: jumper 5s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--i));
+
+
+}@keyframes jumper {
+	0% {
+		transform: translateY(0px);
+	}
+	5% {
+		transform: translateY(-10px);
+	}
+	10%, 50% {
+		transform: translateY(0px);
+	}
+}
+ 
+
+svg { color : "red"; }
