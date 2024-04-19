@@ -180,15 +180,13 @@ a:focus{
   cursor: pointer;
   font-size: 14px;
   font-variation-settings: "wght" 150;
-  transition: 0.3s ease-in-out;
-}
+  transition: 0.3s ease-in-out;}
 
 .my-button:hover {
   
   background-color: var(--secondary-button-bg);
   transition: 0.s ease-in-out;
-  font-variation-settings: "wght" 400;
-}
+  font-variation-settings: "wght" 400;}
 
 
 <button class="my-button" ">Hire Me</button>
@@ -329,9 +327,7 @@ img {
 
   background-color: var(--secondary-button-bg);
 
-font-variation-settings: "wght":700;
-  
-}
+font-variation-settings: "wght":700;}
 
 
 @media (max-width: 600px) {
