@@ -1,0 +1,474 @@
+
+:root {
+  --black: #000000;
+  --invalid-border: #900;
+  --invalid-background: #fdd;
+  --default-link: #010203;
+  --visited-link:  #c2cfdb;
+  --active-link: #2ada6e;
+  --button-bg: #2d7e72;
+  --button-text: white;
+  --button-border: rgba(202, 18, 18, 0.3);
+  --hover-link-color: rgb(0, 255, 153);
+  --focus-outline: blue;
+  --primary-button-bg: #007bff;
+  --secondary-button-bg: #9593FF;
+  --primary-heading-color: #4b134f;
+  --secondary-heading-color: #c94b4b;
+  --tertiary-heading-color: #009FFF;
+  --quaternary-heading-color: #ec2F4B;
+  --grid-item-hover : rgb(185, 244, 228);
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url(/Fonts/DMSans.ttf);
+}
+
+body {
+  font: 1em serif;
+  padding: 0;
+  margin: 0 auto;
+}
+
+form {
+  max-width: 200px;
+}
+
+p * {
+  margin: 20px;
+
+}
+
+input#mail {
+  appearance: none;
+  width: 100%;
+  border: 1px solid var(--black);
+  margin: 0;
+
+  font-family: "DMSans" sans-serif;
+  font-size: 90%;
+
+  box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+input.invalid {
+  border-color: var(--invalid-border);
+  background-color: var(--invalid-background);
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+
+
+h1 {
+  font-family: "DMSans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "DMSans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "DMSans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+
+body {
+  font-family: "DMSans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+}
+
+h1 {
+  font-family: "DMSans", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+ul {
+  font-size: 18px;
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+
+a {
+  color:  var(--default-link); /* Default link color */
+  text-decoration: none ; /* Remove underline by default */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+a:visited {
+  color: var(--visited-link); /* Change color of visited links */
+}
+
+a:active {
+  color: var(--active-link); /* Change color of active links */
+}
+
+
+button {
+/* overwrites browser defaults and resets the border */
+border: none;
+/* takes the font from the outer container */
+font-family: inherit;
+/* styles the background color, font color, and text decoration (underline, etc.) of the button */
+background-color: var(--button-bg);
+color: var(--button-text);
+text-decoration: none;
+/*adds spacing to the button (this will be discussed more in-depth later) */
+padding: 10px;
+border-radius: 3px;
+/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+border-bottom: 2px solid var(--button-border);
+}
+
+a:hover {
+  color: var(--hover-link-color);
+text-decoration:underline; /*this underlign the link on hover */
+
+}
+
+a:visited {  
+color:  none;
+
+}
+
+a:focus{
+  outline: 2px solid var(--focus-outline); 
+}
+
+/* CSS to style the button */
+.my-button {
+  background-color: var(--primary-button-bg);
+
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-variation-settings: "wght" 150;
+  transition: 0.3s ease-in-out;
+}
+
+.my-button:hover {
+  
+  background-color: var(--secondary-button-bg);
+  transition: 0.s ease-in-out;
+  font-variation-settings: "wght" 400;
+}
+
+
+<button class="my-button" ">Hire Me</button>
+
+/* Base font size */
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+/* Text elements */
+body {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5; /* 1.5 times the font size */
+}
+
+
+
+h1 {
+  
+  font-variation-settings: "wght" 500; /* Exemple de variation de poids et de largeur */
+  transition: 0.5s ease-in-out;
+  font-size: 2rem; /* 32px */
+  line-height: 1.2; /* 1.2 times the font size */
+}
+h1:hover {
+  transition: 1s ease-in-out;
+  font-variation-settings: "wght" 150;
+}
+
+p {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.6; /* 1.6 times the font size */
+}
+
+/* Responsive font sizes */
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+}
+
+.profile__text {
+  flex: 1 1 100px;
+}
+
+.page-header {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+
+justify-content: space-between;
+
+}
+.page-header__item {
+  flex: 0 1 200px;
+
+}
+
+.page-header .page-header__item:last-child {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.page-header__active-item {
+  color: rgb(243, 244, 244);
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+
+.navigation-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+.navigation-list li {
+  
+  margin-left: 15px;
+}
+
+.navigation-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation-list__item {
+  margin-left: 20px; /* Adjust as needed */
+}
+
+.content{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+}
+
+.grid-container {
+  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 2 colonnes égales */
+  grid-gap: 10px; /* Espacement entre les éléments */
+  width: 800px;
+  border-radius: 5px;
+}
+
+
+.grid-item {
+  background-color: #7d76cd; /* Couleur de fond */
+  padding: 20px; /* Espacement interne */
+  text-align: center; /* Centrage du texte */
+ transition: 0.5s ease-in;
+ font-variation-settings: "wght" 150;
+ border: none;
+ border-radius: 5px;
+}
+
+
+.grid-item:hover {
+
+  background-color: var( --grid-item-hover );
+  font-variation-settings:  "wght" 700 ;
+}
+
+
+
+.flex-item:hover {
+
+  background-color: var(--secondary-button-bg);
+
+font-variation-settings: "wght":700;
+  
+}
+
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    width: 100%; /* Full width */
+  }
+
+  .grid-item {
+    font-size: 20px; /* Smaller font size */
+  }
+}
+
+h1 {
+  font-size: 28px; /* Smaller font size for heading 1 */
+}
+
+
+
+
+.withgap {
+  gap: 10px
+}
+
+/* CSS */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animated-text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 7s steps(30,end ) forwards; /* Adjust duration as needed */ 
+  text-align: center;
+}
+
+.stop-animation {
+  animation-play-state: paused;
+}
+
+ 
+
+
+
+@media screen and (min-width: 768px) {
+ 
+  body {
+    font-size: 0.875rem; /* 14px for smaller screens */
+  }
+}
+
+
+.wavy {
+	position: relative;
+	-webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+.wavy span {
+	position: relative;
+   /*I don't think it's necessary*/
+	display: inline-block;
+	animation: jumper 5s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--i));
+
+  
+
+}@keyframes jumper {
+	0% {
+		transform: translateY(0px);
+	}
+	5% {
+		transform: translateY(-10px);
+	}
+	10%, 50% {
+		transform: translateY(0px);
+	}
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img.animated_image {
+  animation: spin 15s linear infinite; /* Spin continuously for 2 seconds */
+}
+
+#home {
+
+  
+    /* fallback for old browsers */
+    background: linear-gradient(to right, var(--primary-heading-color), var(--secondary-heading-color));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--primary-heading-color), var(--secondary-heading-color));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  }
+
+  #contact {
+
+   
+      /* fallback for old browsers */
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, var(--tertiary-heading-color), var(--quaternary-heading-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+ 
