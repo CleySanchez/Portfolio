@@ -59,6 +59,22 @@ input[type="submit"] {
       
   }
 
+  @keyframes slidein {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  
+img {
+  animation: slidein 1s forwards;
+}
+
+
+
   
 
   .navigation-list {

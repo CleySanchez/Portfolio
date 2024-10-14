@@ -15,12 +15,27 @@
   --color-background: #f2f4f3;
 }
 
+@font-face {
+  font-family: DMSans;
+  src: url(/Fonts/DMSans.ttf);
+}
+
+@font-face {
+  font-family: DMSans-italic;
+  src: url(/Fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: Grenze;
+  src: url(/Fonts/GrenzeGotisch-VariableFont_wght.ttf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "DMsans", sans-serif;
+  font-family: "DMSans","jacquard12",sans-serif;
 }
 
 body {
@@ -70,11 +85,12 @@ input[type="submit"] {
           justify-content: space-between;
 
   img {
+
       width: 6rem;
       
-  }
-
+      }
   
+  }
 
   .navigation-list {
       display: -webkit-box;
@@ -93,7 +109,8 @@ input[type="submit"] {
           text-decoration: underline;
       }
   }
-}
+
+
 
 .content {
   max-width: 80%;
@@ -115,7 +132,40 @@ input[type="submit"] {
       margin: 0 auto;
       
   }
- 
+}
+  
+
+  .Yingyang {
+    animation: 11s ease-in-out spin reverse;
+  }
+
+  @keyframes spin {
+    from {transform :rotate(0deg);} 
+    to {transform : rotate(360deg);}
+  
+}
+
+
+.hello {
+font-family: "DMSans";  
+animation: variation 5s linear  infinite;
+}
+
+@keyframes variation {
+  0% {font-variation-settings:"wght" 400 ;}
+  25% {font-variation-settings:"wght" 900, "ital" 1 ;}
+  50% {font-variation-settings:"wght" 200 ;}
+  100% {font-variation-settings:"wght" 100 ;}
+
+}
+
+@keyframes Typo {
+  0% {font-family: DMSans; }
+  25% {font-family: Grenze;}
+  50% {font-family: DMSans-italic;}
+  100% {font-variation-settings: "wght" 400;}
+
+}
 
   table {
       margin-top: 2rem;
@@ -135,7 +185,7 @@ input[type="submit"] {
           }
       }
   }
-}
+
 
 #contact-form {
   display: -webkit-box;
@@ -172,8 +222,93 @@ input[type="submit"] {
 /**********
 * Work 
 ***********/
+/* Grid Container for Project Cards */
+/* Grid Container pour les cartes */
+/* General grid container styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-fill to handle the space correctly */
+  gap: 1.5rem;
+  padding: 20px;
+  max-width: 1200px; 
+  margin: 0 auto;
+  align-items: start;
+}
 
+/* Individual card styling */
+.grid-item {
+  background: #f0e6e4;
+  border-radius: 10px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
+  min-height: 300px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+/* Manually move the Chat App up */
+.grid-container > .grid-item:nth-child(8) {
+  grid-row: 2; /* Move to the second row */
+  grid-column: 3; /* Position it next to MyFlix App */
+}
+
+.project-image-wrapper {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.grid-item__title {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.grid-item__text {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 .grid-container {
@@ -222,7 +357,7 @@ input[type="submit"] {
 @media screen and (min-width: 960px) {
   #contact-form {
       width: 30rem;
-  }
+  } }
 
   .grid-container {
       -ms-grid-columns: (1fr)[4];
@@ -231,57 +366,10 @@ input[type="submit"] {
       grid-template-rows: repeat(2, 1fr);
   }
 
-  .grid-container > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-
-  .grid-container > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-
-  .grid-container > *:nth-child(3) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-
-  .grid-container > *:nth-child(4) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 4;
-  }
-
-  .grid-container > *:nth-child(5) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-
-  .grid-container > *:nth-child(6) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-  }
-
-  .grid-container > *:nth-child(7) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-  }
-
-  .grid-container > *:nth-child(8) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 4;
-  }
-
-  .grid-item:nth-child(1) {
-      -ms-grid-column: 1;
-      -ms-grid-column-span: 2;
-      grid-column: 1 / span 2;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 2;
-      grid-row: 1 / span 2;
-  }
+  /* Apply the jumper animation when hovering over the grid items */
+.grid-item:hover {
+  animation: jumper 15s ease;
 }
-
-
 
 
 @-webkit-keyframes jumper {
@@ -298,8 +386,6 @@ input[type="submit"] {
                 transform: translateY(0px);
     }
 }
-
-
 
 
 @keyframes jumper {
