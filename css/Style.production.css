@@ -453,5 +453,11 @@ animation: variation 5s linear  infinite;
           animation-play-state: paused;
 }
 
- 
+footer h2 {
+  margin-bottom: 15px; /* Adds spacing below "Find me on:" */
+}
 
+.social-icon {
+
+  margin-bottom: 30px; /* Optional spacing below the icons */
+}
